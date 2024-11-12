@@ -1,12 +1,9 @@
-import express, { Request, Response } from "express"
+import app from './app'; 
 
-const app = express()
-const port = process.env.PORT || 8000
+const PORT = process.env.PORT || 5000;
 
-app.get('/', (req: Request, res: Response) => {
-    res.send('Hello, TypeScript with Express!');
+// TODO: connect to DB
+
+app.listen(PORT, () => {
+  console.log(`Servidor corriendo en el puerto ${PORT}`);
 });
-
-app.listen(port, () => {
-    console.log(`server reuning on port, ${port} 🚀`)
-})
