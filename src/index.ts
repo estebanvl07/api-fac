@@ -1,9 +1,8 @@
 import app from './app'; 
-
-const PORT = process.env.PORT || 5000;
+import { PORT } from 'config/constants';
 
 // TODO: connect to DB
 
 app.listen(PORT, () => {
-  console.log(`Servidor corriendo en el puerto ${PORT}`);
+  console.log(`server reuning on port, ${PORT} 🚀`)
 });
